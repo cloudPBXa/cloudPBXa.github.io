@@ -1,57 +1,37 @@
+# Parchment
+A clean, single column blog template built for jekyll
 
-# ourBot(베타) v0.2.2
----
-# 제공중인 서비스
----
-## 기념일 축하
-### 설명
-- 기념일 아침에 기념일을 축하하는 서비스입니다
-### 관련 명령어
-- /start : 봇 재시작시 한번만 시행하면 알아서 동작
+## Building Locally
+* Clone the repository
+* Run `bundle install`
+* Run `bundle exec jekyll serve`
+* Visit browser at `http://127.0.0.1:4000/parchment/`
 
-## 익명 대화
+## Usage
 
-### 설명
-- 봇에게 개인톡으로 /secret 1234로 익명서비스에 가입하신 후, /secret text를 입력하면 text가 단체방에 익명으로 전달되는 서비스입니다
-- 몇초의 지연시간 후에 전송하고 싶을 시, /secret n text 입력하면 n초후 전송
+* To use this as your GitHub Page, fork this repository, and
+  rename it to `<username>.github.io`. Your site will be live
+  at `https://<username>.github.io/parchment-jekyll`.
 
-### 관련 명령어
-- /secret *text* : text 익명전송
-- /secret *time(s)* *text* : time 시간 후에 text 익명전송
+* You can customise variables in `_config.yml` and `css/*` files.
 
-## 팀회식
-### 설명
-- 팀원들끼리 리뷰를 남기고, 점수를 기반으로 음식점을 추천받는 서비스입니다
-- 음식점 평점은 최신일수록 높은 가중치로 계산됩니다
-- 음식점 평점이 높을수록 높은 확률로 추천됩니다
+* You can add markdown files, say `foo.md` in the root directory
+  of the repository. It will then be accessible like
+  `your.website.com/foo`.
 
-### 관련 명령어
-- /dinerRecommend : 평점을 기반으로 추천받는 명령어입니다
-- /dinerComments : 다른 사람들이 남긴 리뷰(코멘트)를 확인하는 명령어입니다
-- /dinerManualUpdate : 정해진 시간 외에 평점을 수동으로 업데이트하는 명령어입니다(관리자용)
+* To add posts, add your posts in the `_posts` directory. Follow
+  the naming convention `%yyyy-%mm-%dd-your-title-here.md`.
 
----
-# 추가 예정 서비스 (언제든 변동될 수 있음)
----
-## 팀회식 (AI)
-- 사진을 찍으면 사람들의 얼굴을 인식하여 자동으로 리뷰 요청 전송 로직
-## 대화 요약 (AI)
-- 대화록을 정리하여 간단히 어떤 내용이었는지 요약 : 대화가 적을 경우 요약 에러 개선 필요할 것
-## 방 활성화 (AI)
-- 가장 대화가 적은 사람 중 랜덤으로 가십거리 관련 질문 (가십거리는 뉴스 스크랩, 파싱)
+* To add a profile picture, use class `profile-picture` around
+  the image.
 
-- v0.1.0 (2023.12.08)
-    - 익명 대화 서비스(timer기능 포함) 런칭
-    - 기념일 서비스 런칭
-    - 각 서비스에 대한 설명 미작성
+## Contributing
+Pull requests are welcome. For major changes, please open an
+issue first to discuss what you would like to change.
 
-- v0.2.0 (2023.12.20)
-    - 익명 대화: 지연 메세지 기능 추가
-    - 팀회식(팀내 음식점 평가 및 추천) 서비스 런칭
-- v0.2.1 (2023.12.22)
-    - 익명 대화: 지연 메세지에서 지연시간 보여지지 않게 수정
-    - 팀회식 음식점 평가점수를 최신리뷰가 높은 가중치를 가지도록 수정
-- v0.2.2 (2023.12.28)
-    - 팀회식 평가점수 업데이트 에러 수정
-    - 서비스 설명을 웹을 통해 볼 수 있도록 github pages로 개발
-    - 팀회식 관련 명령어 통일성있게 변경
+## Credits
+Parchment is inspired from the resume theme
+[Researcher](https://github.com/ankitsultana/researcher)
+
+## License
+[GNU GPL v3](LICENSE)
